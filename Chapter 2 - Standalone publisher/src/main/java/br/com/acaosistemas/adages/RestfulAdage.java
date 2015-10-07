@@ -1,4 +1,4 @@
-package adages;
+package br.com.acaosistemas.adages;
 
 import java.util.Set;
 import java.util.HashSet;

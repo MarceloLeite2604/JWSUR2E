@@ -1,4 +1,4 @@
-package adages;
+package br.com.acaosistemas.adages;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
