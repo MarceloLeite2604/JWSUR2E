@@ -1,5 +1,5 @@
 package br.com.acaosistemas.adages3;
- 
+
 public class Adage {
 	private String words;
 	private int wordCount;
