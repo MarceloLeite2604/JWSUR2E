@@ -1,5 +1,5 @@
 # JWSUR2E
-This project contains the examples from "Java Web Services Up And Running 2nd Edition" book.
+This container has the examples from "Java Web Services Up And Running 2nd Edition" book.
 
 The following tools were used to develop it:
   * Java SE Development Kit version 1.8.0_45
