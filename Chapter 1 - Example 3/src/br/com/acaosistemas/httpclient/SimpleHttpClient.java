@@ -1,3 +1,4 @@
+package br.com.acaosistemas.httpclient;
 import java.net.Socket;
 import java.net.URL;
 import java.net.MalformedURLException;
