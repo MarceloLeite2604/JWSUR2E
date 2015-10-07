@@ -1,7 +1,6 @@
 package br.com.acaosistemas.rand;
 
 import java.util.Random;
-
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
