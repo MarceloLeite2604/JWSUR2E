@@ -9,5 +9,6 @@ The following tools were used to develop it:
   * Microsoft Windows XP Professional Service Pack 3;
   * Ubuntu 14.04.3 LTS (For the perl scripts and remote access tests of the services created).
 
-##### Obs:
 Some of the examples were slightly modified to correct some minor things (e. g. warning messages) and adapt it to our environment (Java 1.8 compatibility).
+
+Also, thanks to [Marty Kalin's jwsur2 repository](https://github.com/mkalin/jwsur2). His examples were used for analysis and correction of misspelled commands, typos and analysis of directories and files' structure.
