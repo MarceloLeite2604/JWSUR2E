@@ -1,0 +1,9 @@
+<service name="HelloService">
+	<parameter name="ServiceClass" locked="false">br.com.acaosistemas.hello.HiService
+	</parameter>
+	<description>This service echoes a message with a simpatic hello! :)
+	</description>
+	<operation name="echo">
+		<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+	</operation>
+</service>
