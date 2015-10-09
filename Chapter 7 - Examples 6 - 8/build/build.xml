@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Chapter 7 - Examples 6 - 8" basedir="..">
+	<property environment="env" />
+	<property name="AS_HOME" value="D:/Arquivos de programas/Oracle/glassfish4" />
+	<property name="glassfish.deploy.directory"
+		value="${AS_HOME}/glassfish/domains/domain1/autodeploy" />
+	<property name="jar.filename" value="predictionsejb.jar" />
+	<property name="ear.filename" value="predictionsejb.ear" />
+	<property name="ant.target.dir" value="ant-target" />
+	<property name="ant.build.dir" value="${ant.target.dir}/predictionsejb" />
+	<property name="maven.target.dir" value="target/predictionsejb" />
+	<target name="compile">
+		<mkdir dir="${ant.build.dir}" />
+		<javac includeantruntime="false" debug="on" fork="true"
+			destdir="${ant.build.dir}" srcdir="${basedir}/src/main/java">
+			<classpath>
+				<fileset dir="${maven.target.dir}/WEB-INF/lib">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+		<!-- <copy toDir="${ant.build.dir}" failonerror="false">
+			<fileset dir="${basedir}/src/main/java">
+				<include name="**/*.java" />
+			</fileset>
+		</copy> -->
+	</target>
+	<target name="build" depends="compile">
+		<copy toDir="${ant.build.dir}/META-INF" failonerror="false">
+			<fileset dir="${maven.target.dir}/META-INF">
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+		<jar destfile="${ant.target.dir}/${jar.filename}">
+			<fileset dir="${ant.build.dir}" />
+		</jar>
+		<jar destfile="${ant.target.dir}/${ear.filename}">
+			<fileset file="${ant.target.dir}/${jar.filename}" />
+		</jar>
+	</target>
+	<target name="deploy" depends="build">
+		<copy toDir="${glassfish.deploy.directory}" failonerror="false">
+			<fileset dir="${ant.target.dir}">
+				<include name="${ear.filename}" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="${ant.target.dir}" />
+	</target>
+</project>

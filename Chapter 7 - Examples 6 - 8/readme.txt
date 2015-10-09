@@ -1,0 +1,1 @@
+To successfully deploy this example, both the domain and the database have to be up.

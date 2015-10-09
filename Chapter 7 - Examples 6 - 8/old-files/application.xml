@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+	<display-name>PredictionsEJB</display-name>
+	<module>
+		<ejb>predictionsejb.jar</ejb>
+	</module>
+</application>
